@@ -4,51 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Sagar Soft</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body, html {
-    height: 100%;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    background: rgb(0, 119, 50);
-}
-
-.content {
-    text-align: center;
-    padding: 50px;
-    
-    
-    color: #fff;
-}
-
-h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-}
-
-
-        </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <div class="content">
-            <h1>The Sagar Soft</h1>
-            <p>Elevate your knowledge through our innovative apps in trading, tools, books, novels, and more. Experience seamless education and reference at your fingertips.</p>
-        
+<body class="bg-gray-900 text-white font-sans leading-relaxed">
+    <!-- Centered Content -->
+    <div class="flex items-center justify-center min-h-screen p-6">
+        <div class="text-center bg-gray-800 p-8 rounded-lg shadow-xl max-w-xl w-full">
+            <!-- Brand Name with Gradient Effect -->
+            <h1 class="text-4xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                The Sagar Soft
+            </h1>
+
+            <!-- Short Description -->
+            <p class="text-xl mb-8">
+                Elevate your knowledge through our innovative apps in trading, tools, books, novels, and more. Experience seamless education and reference at your fingertips.
+            </p>
+
+            <!-- Button to Google Play Developer Page -->
+            <a href="https://play.google.com/store/apps/dev?id=123" target="_blank" 
+               class="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white py-3 px-8 rounded-full text-lg font-semibold transition transform hover:scale-105">
+                View All Apps on Google Play
+            </a>
         </div>
     </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 py-6 text-center">
+        <p class="text-gray-400">© <span id="year"></span> The Sagar Soft. All rights reserved.</p>
+    </footer>
     
+    <!-- JavaScript to Update Year -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
